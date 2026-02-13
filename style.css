@@ -1,0 +1,44 @@
+body {
+  margin:0; padding:0;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+  color:white; text-align:center; overflow-x:hidden;
+}
+.center { margin-top:100px; }
+button.btn {
+  background:white; color:#ff4b5c; border:none; padding:15px 25px; font-size:18px;
+  border-radius:30px; cursor:pointer; transition:0.3s;
+}
+button.btn:hover { background:#ff4b5c; color:white; }
+
+/* Heart photo */
+.photo-container { margin-top:20px; z-index:2; position:relative; }
+.heart-photo { width:200px; height:200px; border-radius:50%; border:5px solid white; object-fit:cover; box-shadow:0 0 20px rgba(255,255,255,0.6); }
+
+/* Floating hearts */
+.hearts { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden; }
+.hearts::before, .hearts::after { content:"💖💞💓"; position:absolute; font-size:20px; animation: float 6s linear infinite; }
+@keyframes float { 0% {transform: translateY(1000px) translateX(0);} 100% {transform: translateY(-200px) translateX(200px);} }
+
+/* Letter */
+.letter { max-width:700px; margin:20px auto; background:rgba(0,0,0,0.4); padding:20px; border-radius:20px; backdrop-filter:blur(5px); z-index:2; position:relative; }
+
+/* Gift boxes */
+.gift-boxes { display:flex; justify-content:center; margin:20px 0; gap:15px; }
+.gift-boxes .box { width:80px; cursor:pointer; transition:transform 0.3s; }
+.gift-boxes .box:hover { transform:scale(1.2); }
+
+/* Modal */
+.modal { display:none; position:fixed; z-index:5; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7);}
+.modal-content { background:white; color:black; margin:15% auto; padding:20px; width:80%; border-radius:20px; }
+.close { float:right; font-size:28px; cursor:pointer; }
+
+/* Controls */
+.controls { margin:20px 0; }
+.controls button { margin:5px; padding:10px 15px; border-radius:20px; border:none; cursor:pointer; }
+.controls input[type=range] { width:120px; }
+
+/* Word puzzle game */
+#puzzle-grid { display:grid; grid-template-columns: repeat(10, 40px); gap:5px; justify-content:center; margin:10px auto; }
+.puzzle-box { width:40px; height:40px; background:rgba(255,255,255,0.5); color:black; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:20px; border-radius:5px; cursor:pointer; }
+.puzzle-box.prefill { background:#ffd700; } /* hint letters */

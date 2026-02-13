@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Kabby 💙</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating hearts -->
+<div class="hearts"></div>
+
+<!-- Her photo -->
+<div class="photo-container">
+  <img src="ann.jpg" alt="Ann Kaboo" class="heart-photo">
+</div>
+
+<!-- Countdown -->
+<div class="countdown" id="countdown"></div>
+
+<!-- Love letter -->
+<div class="letter" id="letter">
+  <h1>To My Love, Kabby 💖</h1>
+  <p id="letter-text"></p>
+</div>
+
+<!-- Music section -->
+<div class="controls">
+  <h2>Music (Softly)</h2>
+  <button id="music-toggle">🎵 Play/Stop Music</button>
+  <input type="range" id="volume" min="0" max="1" step="0.1">
+</div>
+
+<!-- Voice message section -->
+<div class="controls">
+  <h2>Most Special Gift (Voice Message)</h2>
+  <button id="voice-toggle">🎤 Play/Pause Letter</button>
+  <input type="range" id="voice-volume" min="0" max="1" step="0.1">
+</div>
+
+<!-- Gift boxes -->
+<div class="gift-boxes">
+  <img src="chocolate.png" alt="Chocolate" class="box" data-content="Chocolate 🍫">
+  <img src="gift.png" alt="Gift" class="box" data-content="Special surprise gift 🎁">
+  <img src="cookies.png" alt="Cookies" class="box" data-content="Cookies / Oreo 🍪">
+  <img src="cake.png" alt="Cake" class="box" data-content="Cake 🎂">
+</div>
+
+<!-- Gift modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modal-text"></p>
+  </div>
+</div>
+
+<!-- Word puzzle game -->
+<div class="game">
+  <h2>Word Scramble Game 💌</h2>
+  <p>Complete the words using the letters in the boxes!</p>
+  <div id="puzzle-grid"></div>
+  <button id="checkPuzzle">Check Words</button>
+  <p id="puzzle-result"></p>
+</div>
+
+<!-- Audio elements -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<audio id="voice">
+  <source src="voice.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
